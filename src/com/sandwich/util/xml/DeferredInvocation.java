@@ -48,7 +48,7 @@ class DeferredInvocation {
 			throw new IllegalArgumentException("path is required");
 		}else if(methodName == null){
 			throw new IllegalArgumentException("methodName is required");
-		}else if(receiver == null || receiver instanceof Boolean){
+		}else if(receiver == null || receiver instanceof String){
 			throw new IllegalArgumentException("receiver is required");
 		}else{
 			path = path.replace("/", " ");
