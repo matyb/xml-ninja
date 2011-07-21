@@ -21,6 +21,8 @@ if you go the annotation route, invoke the mapFromAnnotations method before you 
 
 or if you wish to have an imported/unmodified class's method invoked instead:
 new XmlNinja(this).addMethodCall("/config/databases/database", "addDatabase", "id", "url");
+                                              ^                       ^         ^     ^
+                                            path                method name    arg1  arg2
 
 reception can even be split accross handlers - which do not need to implement any interface or extend from any type!
 new XmlNinja().addMethodCall("/config/databases/database", "addDatabase", this, "id", "url")
