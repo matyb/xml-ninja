@@ -26,7 +26,7 @@ new XmlNinja(this).addMethodCall("/config/databases/database", "addDatabase", "i
 
 reception can even be split accross handlers - which do not need to implement any interface or extend from any type!
 new XmlNinja().addMethodCall("/config/databases/database", "addDatabase", this, "id", "url")
-			  .addMethodCall("/config/meh", "addMeh", new MehHandler(), "meh");
+              .addMethodCall("/config/meh", "addMeh", new MehHandler(), "meh");
 			  
 When parsing the xml snippet above the XmlNinja will call back to you with pre parsed and ordered (as defined in the expectation, not the xml) strings for each declared arg. So given the snippet above, the addDatabase call will get hit with:
 public void addDataBase(String id, String url){
