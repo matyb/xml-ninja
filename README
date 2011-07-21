@@ -17,7 +17,7 @@ when parsed - will send values for corresponding elements/attribues to a method 
 @CallFor(path="/config/databases/database", args={id, url}) 
 public void addDataBase(String id, String url){ ...
 
-or if you wish to have an imported/unmodified class invoked instead:
+or if you wish to have an imported/unmodified class's method invoked instead:
 new XmlNinja(this).addMethodCall("/config/databases/database", "addDatabase", "id", "url");
 
 reception can even be split accross handlers - which do not need to implement any interface or extend from any type!
