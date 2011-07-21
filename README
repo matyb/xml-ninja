@@ -7,7 +7,7 @@ with a more compact and expressive API. For instance:
 		<database id="test1">
 			<url>jdbc:mysql://localhost:3306/test1 </url>
 		</database>
-		<database url="jdbc:mysql://localhost:3306/test2 " >
+		<database url="jdbc:mysql://localhost:3306/test2 ">
 			<id>test2</id>
 		</database>
 	</databases>
