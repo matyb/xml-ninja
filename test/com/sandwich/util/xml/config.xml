@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+	<datasources>
+		<datasource>
+			<name>aTest</name>
+			<driver>com.mysql.jdbc.Driver</driver>
+			<url>jdbc:mysql://localhost:3306/test</url>
+			<databaseDialectName>com.pk.MySQLDialect</databaseDialectName>
+		</datasource>
+		<datasource>
+			<name>HsqlDataSource</name>
+			<driver>org.hsqldb.jdbcDriver</driver>
+			<url>jdbc:mysql://localhost:3306/test555</url>
+			<databaseDialectName>com.pk.OracleDialect</databaseDialectName>
+		</datasource>
+		<!-- <datasource name="HsqlDataSource" driver="org.hsqldb.jdbcDriver"
+			url="jdbc:mysql://localhost:3306/test555" databaseDialectName="com.pk.OracleDialect"></datasource> -->
+		<datasource>
+			<name>test</name>
+			<driver>com.mysql.jdbc.Driver</driver>
+			<url>jdbc:mysql://localhost:3306/test</url>
+		<databaseDialectName>com.pk.MySQLDialect</databaseDialectName>
+		</datasource>
+			
+	</datasources>
+	<export>
+		<delimiterChar>,</delimiterChar>
+		<encloseByChar>"</encloseByChar>
+		<useCdata>true</useCdata>
+		<headerColor>#ffff80</headerColor>
+		<borderColor>green</borderColor>
+		<altRowColor>#b9ffb9</altRowColor>
+	</export>
+	<general>	
+		<lafs>
+			<laf>
+				<class>com.incors.plaf.kunststoff.KunststoffLookAndFeel</class>
+				<selected>true</selected>
+			</laf>
+			<laf>
+				<class>javax.swing.plaf.metal.MetalLookAndFeel</class>
+				<selected>false</selected>
+			</laf>
+			<laf>
+				<class>com.sun.java.swing.plaf.windows.WindowsLookAndFeel</class>
+				<selected>false</selected>
+			</laf>
+			<laf>
+				<class>com.sun.java.swing.plaf.motif.MotifLookAndFeel</class>
+				<selected>false</selected>
+			</laf>
+		</lafs>
+		<history>
+			<mode>2</mode>
+		</history>
+	</general>
+</config>

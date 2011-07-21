@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<datasources>
+		<datasource name="aTest" 
+					driver="com.mysql.jdbc.Driver" 
+					url="jdbc:mysql://localhost:3306/test" 
+					databaseDialectName="com.pk.MySQLDialect" />
+	</datasources>
+</config>

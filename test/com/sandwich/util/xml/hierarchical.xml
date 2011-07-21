@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<stuff>
+	<people>
+		<person id="1">
+			<name>person one</name>
+		</person>
+		<person id="2" name="person two"/>
+		<person name="person three">
+			<address street="123 street way">
+				<zip>12345</zip>
+			</address>
+		</person>	
+		<person id="4" name="number four">
+			<phone>123-321-1234</phone>
+		</person>
+	</people>
+	<state>oh</state>
+</stuff>

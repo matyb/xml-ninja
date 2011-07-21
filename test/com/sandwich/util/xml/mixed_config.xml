@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+	<datasources>
+		<datasource name="aTest" 
+					driver="com.mysql.jdbc.Driver" 
+					url="jdbc:mysql://localhost:3306/test" 
+					databaseDialectName="com.pk.MySQLDialect" >
+			<!-- notice we're overlapping elements & 
+				 attributes elements take precedence -->
+			<name>mehTest</name>
+			<url>jdbc:mysql://localhost:3306/meh</url>
+		</datasource>
+		<datasource name="aTest" 
+					driver="com.mysql.jdbc.Driver" 
+					url="jdbc:mysql://localhost:3306/test" 
+					databaseDialectName="com.pk.MySQLDialect" >
+			<!-- notice we're overlapping elements & 
+				 attributes elements take precedence -->
+			<name>mehTest</name>
+			<url>jdbc:mysql://localhost:3306/meh</url>
+		</datasource>
+	</datasources>
+</config>

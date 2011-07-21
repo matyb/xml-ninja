@@ -1,0 +1,44 @@
+XmlNinja v.01 pre-alpha
+
+A simple library that makes reading xml a breeze. This class was inspired by the Apache Commons XMLDigester, but
+with a more compact and expressive API. For instance:
+<config>
+	<databases>
+		<database id="test1">
+			<url>jdbc:mysql://localhost:3306/test1</url>
+		</database>
+		<database url="jdbc:mysql://localhost:3306/test2">
+			<id>test2</id>
+		</database>
+	</databases>
+</config>
+
+when parsed - will send values for corresponding elements/attribues to a method you define. One option for defining this is with an annotation:
+@CallFor(path="/config/databases/database", args={id, url}) 
+public void addDataBase(String id, String url){ ...
+
+or if you wish to have an imported/unmodified class invoked instead:
+new XmlNinja(this).addMethodCall("/config/databases/database", "addDatabase", "id", "url");
+
+reception can even be split accross handlers - which do not need to implement any interface or extend from any type!
+new XmlNinja().addMethodCall("/config/databases/database", "addDatabase", this, "id", "url")
+			  .addMethodCall("/config/meh", "addMeh", new MehHandler(), "meh");
+			  
+When parsing the xml snippet above the XmlNinja will call back to you with pre parsed and ordered (as defined in the expectation, not the xml) strings for each declared arg. So given the snippet above, the addDatabase call will get hit with:
+public void addDataBase(String id, String url){
+	System.out.println(id);
+	System.out.println(url);
+}
+
+The output would be:
+test1
+jdbc:mysql://localhost:3306/test1
+test2
+jdbc:mysql://localhost:3306/test2
+
+Complete examples of useage can be found in the test folder.
+
+Issues/Gotchas:
+@see the XmlNinjaHierarchicalDataStructureTest - royally inconsistent xml is still a problem :(
+
+Happy Xml'ing!
