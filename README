@@ -17,6 +17,8 @@ when parsed - will send values for corresponding elements/attribues to a method 
 @CallFor(path="/config/databases/database", args={id, url}) 
 public void addDataBase(String id, String url){ ...
 
+if you go the annotation route, invoke the mapFromAnnotations method before you invoke parse - that will set the expectations from any instance of a class containing methods annotated with @CallFor to participate as a handler when parse is invoked.
+
 or if you wish to have an imported/unmodified class's method invoked instead:
 new XmlNinja(this).addMethodCall("/config/databases/database", "addDatabase", "id", "url");
 
