@@ -43,6 +43,7 @@ jdbc:mysql://localhost:3306/test2
 Complete examples of useage can be found in the test folder.
 
 Issues/Gotchas:
-@see the XmlNinjaHierarchicalDataStructureTest - royally inconsistent xml is still a problem :(
+-@see the XmlNinjaHierarchicalDataStructureTest - royally inconsistent xml is still a problem :(
+-handles POX (plain ole xml) almost exclusively. CDATA & namespaces are for a future release.
 
 Happy Xml'ing!
